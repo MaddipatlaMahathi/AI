@@ -1,0 +1,2 @@
+disease(diabetes).
+diet(diabetes, 'Avoid sugar and white rice').
