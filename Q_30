@@ -1,0 +1,3 @@
+goal(X) :- subgoal1(X), subgoal2(X).
+subgoal1(X) :- number(X).
+subgoal2(X) :- X > 0.
