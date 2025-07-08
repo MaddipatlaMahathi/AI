@@ -1,0 +1,9 @@
+count_vowels([], 0).
+count_vowels([H|T], C) :-
+    ( atom(H) -> memberchk(H, [a,e,i,o,u,'A','E','I','O','U']) ;  % Atoms
+      memberchk(H, "aeiouAEIOU") ),                                % ASCII codes
+    count_vowels(T, C1), C is C1 + 1.
+count_vowels([H|T], C) :-
+    ( (atom(H) -> \+ memberchk(H, [a,e,i,o,u,'A','E','I','O','U']) ;
+      \+ memberchk(H, "aeiouAEIOU") ),
+    count_vowels(T, C).
