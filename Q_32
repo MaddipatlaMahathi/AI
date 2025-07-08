@@ -1,0 +1,6 @@
+pattern_matches([], []).
+pattern_matches([P|PTail], [T|TTail]) :-
+    match_element(P, T),
+    pattern_matches(PTail, TTail).
+match_element(_, _).
+match_element(X, X).
